@@ -11,7 +11,9 @@
     ],
     "frames": 61,
     "atoms": 29,
-    "script": "models/step-01.spt"
+    "script": "models/step-01.spt",
+    "diagram": "diagrams/step-01.png",
+    "diagramSvg": "diagrams/step-01.svg"
   },
   {
     "num": 2,
@@ -25,7 +27,9 @@
     ],
     "frames": 61,
     "atoms": 24,
-    "script": "models/step-02.spt"
+    "script": "models/step-02.spt",
+    "diagram": "diagrams/step-02.png",
+    "diagramSvg": "diagrams/step-02.svg"
   },
   {
     "num": 3,
@@ -39,21 +43,51 @@
     ],
     "frames": 61,
     "atoms": 28,
-    "script": "models/step-03.spt"
+    "script": "models/step-03.spt",
+    "diagram": "diagrams/step-03.png",
+    "diagramSvg": "diagrams/step-03.svg"
   },
   {
     "num": 4,
     "title": "Boekelheide rearrangement",
     "conditions": "Ac₂O / AcOH; heat",
-    "description": "Net conversion of the C2 methyl group into CH₂OAc, with removal of the N-oxide. O-acylation, deprotonation and the formal rearrangement are condensed; this is not a unique computed pathway.",
+    "description": "N-oxide oxygen adds to acetic anhydride. Collapse releases acetate, which removes the C2-methyl proton. The final panel follows the formal [3,3] rearrangement drawn in ChemDraw.",
     "phases": [
       "N-oxide + acetic anhydride",
       "Acylation / rearrangement (condensed)",
       "Acetoxymethyl pyridine + AcOH"
     ],
-    "frames": 61,
+    "frames": 181,
     "atoms": 38,
-    "script": "models/step-04.spt"
+    "script": "models/step-04.spt",
+    "diagram": "diagrams/step-04.png",
+    "diagramSvg": "diagrams/step-04.svg",
+    "stages": [
+      {
+        "name": "O-acylation: addition",
+        "start": 1,
+        "end": 45,
+        "diagram": "diagrams/step-04-addition.png"
+      },
+      {
+        "name": "O-acylation: collapse",
+        "start": 46,
+        "end": 90,
+        "diagram": "diagrams/step-04-collapse.png"
+      },
+      {
+        "name": "Alpha deprotonation",
+        "start": 91,
+        "end": 135,
+        "diagram": "diagrams/step-04-deprotonation.png"
+      },
+      {
+        "name": "Formal [3,3] rearrangement",
+        "start": 136,
+        "end": 181,
+        "diagram": "diagrams/step-04-rearrangement.png"
+      }
+    ]
   },
   {
     "num": 5,
@@ -67,7 +101,9 @@
     ],
     "frames": 61,
     "atoms": 32,
-    "script": "models/step-05.spt"
+    "script": "models/step-05.spt",
+    "diagram": "diagrams/step-05.png",
+    "diagramSvg": "diagrams/step-05.svg"
   },
   {
     "num": 6,
@@ -81,7 +117,9 @@
     ],
     "frames": 61,
     "atoms": 29,
-    "script": "models/step-06.spt"
+    "script": "models/step-06.spt",
+    "diagram": "diagrams/step-06.png",
+    "diagramSvg": "diagrams/step-06.svg"
   },
   {
     "num": 7,
@@ -95,7 +133,13 @@
     ],
     "frames": 61,
     "atoms": 23,
-    "script": "models/step-07.spt"
+    "script": "models/step-07.spt",
+    "diagram": "diagrams/step-07.png",
+    "diagramSvg": "diagrams/step-07.svg",
+    "extraDiagram": {
+      "name": "Ring closure and proton transfers",
+      "src": "diagrams/step-07-ring-closure.png"
+    }
   },
   {
     "num": 8,
@@ -109,7 +153,9 @@
     ],
     "frames": 61,
     "atoms": 43,
-    "script": "models/step-08.spt"
+    "script": "models/step-08.spt",
+    "diagram": "diagrams/step-08.png",
+    "diagramSvg": "diagrams/step-08.svg"
   },
   {
     "num": 9,
@@ -123,6 +169,8 @@
     ],
     "frames": 61,
     "atoms": 65,
-    "script": "models/step-09.spt"
+    "script": "models/step-09.spt",
+    "diagram": "diagrams/step-09.png",
+    "diagramSvg": "diagrams/step-09.svg"
   }
 ]

@@ -1,32 +1,38 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Esomeprazole synthesis — interactive JSmol</title>
-  <link rel="stylesheet" href="player.css">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Esomeprazole — 3D reaction and ChemDraw mechanism</title>
+  <link rel="stylesheet" href="player.css?v=paired-20261011">
   <script defer src="https://chemapps.stolaf.edu/jmol/jsmol/JSmol.min.js"></script>
-  <script defer src="player.js"></script>
+  <script defer src="player.js?v=paired-20261011"></script>
 </head>
 <body>
 <main>
-  <header><p class="eyebrow">ESOMEPRAZOLE · SYNTHESIS IN 3D</p><h1 id="stepTitle">Interactive reaction model</h1><p id="conditions"></p></header>
+  <header class="top"><div><p class="eyebrow">ESOMEPRAZOLE · SYNTHESIS</p><h1 id="stepTitle">Interactive synthesis</h1></div><p id="conditions"></p></header>
   <nav id="steps" aria-label="Reaction step"></nav>
-  <div class="viewer-wrap"><div id="viewer" aria-label="Interactive 3D molecule; drag to rotate, scroll to zoom"></div><p id="loading" role="status">Loading JSmol…</p></div>
-  <div class="controls" aria-label="Animation controls">
-    <button id="play" type="button" disabled>Play reaction</button>
-    <button id="pause" type="button" disabled>Pause</button>
-    <button id="restart" type="button" disabled>Reactants</button>
-    <button id="product" type="button" disabled>Products</button>
-    <button id="reset" type="button" disabled>Reset view</button>
-    <label><input type="checkbox" id="loop"> Loop</label>
-    <label><input type="checkbox" id="hydrogens" checked> Hydrogens</label>
+  <div id="stages" class="stages" aria-label="Mechanism stage" hidden></div>
+  <div class="paired">
+    <section class="model-panel" aria-label="3D reaction panel">
+      <h2>Interactive 3D reaction</h2>
+      <div class="viewer-wrap"><div id="viewer" aria-label="Drag to rotate the molecular model; scroll to zoom"></div><p id="loading" role="status">Loading JSmol…</p></div>
+      <div class="controls" aria-label="Animation controls">
+        <button id="play" class="primary" type="button" disabled>Play reaction</button><button id="pause" type="button" disabled>Pause</button><button id="reset" type="button" disabled>Reset view</button>
+        <button id="restart" type="button" disabled>Reactants</button><button id="product" type="button" disabled>Products</button><button id="zoomOut" aria-label="Zoom out 3D" type="button" disabled>−</button><button id="zoomIn" aria-label="Zoom in 3D" type="button" disabled>+</button>
+      </div>
+      <div class="options"><label><input type="checkbox" id="loop"> Loop</label><label><input type="checkbox" id="hydrogens" checked> Hydrogens</label><span>Drag to rotate · scroll to zoom</span></div>
+      <div class="scrub"><label for="progress" class="sr-only">Reaction progress</label><input id="progress" type="range" min="1" max="61" value="1" disabled><output id="frame">1 / 61</output></div>
+      <p id="phase" class="phase" aria-live="polite"></p>
+    </section>
+    <section class="diagram-panel" aria-label="Matching ChemDraw mechanism">
+      <div class="diagram-head"><h2>ChemDraw mechanism</h2><button id="expandDiagram" type="button">Expand diagram</button></div>
+      <div id="diagramViewport" tabindex="0" aria-label="ChemDraw diagram; use zoom controls for detail"><img id="diagram" alt="Matching mechanism exported directly from ChemDraw" draggable="false"></div>
+      <div class="diagram-controls"><button id="diagramOut" type="button" aria-label="Zoom out diagram">−</button><button id="diagramFit" type="button">Fit</button><button id="diagramIn" type="button" aria-label="Zoom in diagram">+</button><button id="showOverview" type="button">Whole route</button><button id="showExtra" type="button" hidden>More detail</button><a id="downloadDiagram" download>High-resolution PNG</a></div>
+      <p id="diagramCaption" class="diagram-caption"></p>
+    </section>
   </div>
-  <div class="scrub"><label for="progress">Reaction progress</label><input id="progress" type="range" min="1" max="61" value="1" disabled><output id="frame">1 / 61</output></div>
-  <p id="phase" class="phase" aria-live="polite"></p>
-  <p class="hint">Drag the molecule to rotate it. Scroll to zoom. Pause or use the slider to inspect a stage.</p>
-  <p id="description"></p>
-  <footer>Illustrative teaching model. Atom positions are interpolated between prepared structures; this is not a calculated reaction path. Dashed bonds mark schematic bond changes. Read alongside the 2D mechanism in Sway. <span id="scope"></span></footer>
+  <p id="description" class="description"></p>
 </main>
+<dialog id="diagramDialog"><div class="dialog-head"><h2 id="dialogTitle">ChemDraw mechanism</h2><button id="closeDiagram" type="button">Close</button></div><img id="largeDiagram" alt="Enlarged native ChemDraw mechanism"></dialog>
 </body>
 </html>

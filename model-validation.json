@@ -27,11 +27,13 @@
     },
     {
       "step": 4,
-      "frames": 61,
+      "frames": 181,
       "atom_count": 38,
       "start_and_end_graphs": "match verified source",
       "net_charge": 0,
-      "sulfur_CIP": null
+      "sulfur_CIP": null,
+      "intermediate_graphs": "All five states match native ChemDraw",
+      "oxygen_mapping": "Matches the formal [3,3] arrows"
     },
     {
       "step": 5,
@@ -73,5 +75,6 @@
       "net_charge": 0,
       "sulfur_CIP": "S"
     }
-  ]
+  ],
+  "paired_revision": "2026-10-11"
 }
