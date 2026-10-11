@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Esomeprazole synthesis — interactive JSmol</title>
+  <link rel="stylesheet" href="player.css">
+  <script defer src="https://chemapps.stolaf.edu/jmol/jsmol/JSmol.min.js"></script>
+  <script defer src="player.js"></script>
+</head>
+<body>
+<main>
+  <header><p class="eyebrow">ESOMEPRAZOLE · SYNTHESIS IN 3D</p><h1 id="stepTitle">Interactive reaction model</h1><p id="conditions"></p></header>
+  <nav id="steps" aria-label="Reaction step"></nav>
+  <div class="viewer-wrap"><div id="viewer" aria-label="Interactive 3D molecule; drag to rotate, scroll to zoom"></div><p id="loading" role="status">Loading JSmol…</p></div>
+  <div class="controls" aria-label="Animation controls">
+    <button id="play" type="button" disabled>Play reaction</button>
+    <button id="pause" type="button" disabled>Pause</button>
+    <button id="restart" type="button" disabled>Reactants</button>
+    <button id="product" type="button" disabled>Products</button>
+    <button id="reset" type="button" disabled>Reset view</button>
+    <label><input type="checkbox" id="loop"> Loop</label>
+    <label><input type="checkbox" id="hydrogens" checked> Hydrogens</label>
+  </div>
+  <div class="scrub"><label for="progress">Reaction progress</label><input id="progress" type="range" min="1" max="61" value="1" disabled><output id="frame">1 / 61</output></div>
+  <p id="phase" class="phase" aria-live="polite"></p>
+  <p class="hint">Drag the molecule to rotate it. Scroll to zoom. Pause or use the slider to inspect a stage.</p>
+  <p id="description"></p>
+  <footer>Illustrative teaching model. Atom positions are interpolated between prepared structures; this is not a calculated reaction path. Dashed bonds mark schematic bond changes. Read alongside the 2D mechanism in Sway. <span id="scope"></span></footer>
+</main>
+</body>
+</html>
