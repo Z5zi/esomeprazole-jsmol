@@ -1,6 +1,6 @@
 'use strict';
-let applet,steps,selected=1,ready=false,diagramScale=1,diagramSource='',overview=false,extra=false;
-const VERSION='paired-20261011';
+let applet,steps,selected=1,ready=false,loadingModel=false,diagramScale=1,diagramSource='',overview=false,extra=false;
+const VERSION='paired-20261011b';
 const el=id=>document.getElementById(id);
 const current=()=>steps[selected-1];
 const script=code=>{if(applet)Jmol.script(applet,code);};
@@ -21,8 +21,8 @@ function updateFrame(n){
 }
 window.onJmolFrame=function(_id,_index,_file,frame){updateFrame(frame);};
 window.onJmolMessage=function(_id,msg){
-  if(String(msg).includes(`ESOMEPRAZOLE_READY_${selected}`)){el('loading').hidden=true;setEnabled(true);updateFrame(1);}
-  else if(/script ERROR|Error reading|FileNotFound/i.test(String(msg))){el('loading').hidden=false;el('loading').textContent='The model could not be loaded. Reload this card to retry.';setEnabled(false);console.error(msg);}
+  if(String(msg).includes(`ESOMEPRAZOLE_READY_${selected}`)){loadingModel=false;el('loading').hidden=true;setEnabled(true);updateFrame(1);}
+  else if(/script ERROR|Error reading|FileNotFound/i.test(String(msg))){console.error(msg);if(loadingModel){el('loading').hidden=false;el('loading').textContent='The model could not be loaded. Reload this card to retry.';setEnabled(false);}}
 };
 function loadStep(n){
   if(!ready||!steps)return;selected=n;const step=current();overview=false;extra=false;
@@ -31,7 +31,7 @@ function loadStep(n){
   el('progress').max=step.frames;el('stages').replaceChildren();el('stages').hidden=!step.stages;
   for(const stage of step.stages||[]){const b=document.createElement('button');b.type='button';b.textContent=stage.name;b.dataset.frame=stage.start;b.onclick=()=>{overview=false;extra=false;el('showOverview').setAttribute('aria-pressed','false');script(`animation off; frame ${stage.start};`);updateFrame(stage.start);};el('stages').appendChild(b);}
   for(const b of el('steps').children)b.setAttribute('aria-current',String(Number(b.dataset.step)===n));
-  updateFrame(1);setEnabled(false);el('loading').hidden=false;el('loading').textContent='Loading reaction frames…';
+  updateFrame(1);loadingModel=true;setEnabled(false);el('loading').hidden=false;el('loading').textContent='Loading reaction frames…';
   const url=new URL(step.script,document.baseURI);url.searchParams.set('v',VERSION);
   script(`animation off; script ${JSON.stringify(url.href)}; save orientation "initial"; set showHydrogens ${el('hydrogens').checked}; print "ESOMEPRAZOLE_READY_${n}";`);
 }
@@ -46,13 +46,13 @@ async function init(){
     Jmol.setDocument(0);el('viewer').innerHTML=Jmol.getAppletHtml('esomeprazoleJSmol',info);
     el('play').onclick=()=>script(`animation mode ${el('loop').checked?'LOOP 1 1':'ONCE'}; frame ${Number(el('progress').value)>=current().frames?'1; frame play':'play'};`);
     el('pause').onclick=()=>script('frame pause;');el('restart').onclick=()=>script('animation off; frame 1;');el('product').onclick=()=>script(`animation off; frame ${current().frames};`);
-    el('reset').onclick=()=>script('restore orientation "initial" 0;');el('zoomIn').onclick=()=>script('zoom @{zoom * 1.2};');el('zoomOut').onclick=()=>script('zoom @{zoom / 1.2};');
+    el('reset').onclick=()=>script('restore orientation "initial" 0;');el('zoomIn').onclick=()=>script('zoom *1.2;');el('zoomOut').onclick=()=>script('zoom /1.2;');
     el('progress').oninput=()=>{const n=Number(el('progress').value);script(`animation off; frame ${n};`);updateFrame(n);};
     el('hydrogens').onchange=()=>script(`set showHydrogens ${el('hydrogens').checked};`);el('loop').onchange=()=>script(`animation mode ${el('loop').checked?'LOOP 1 1':'ONCE'};`);
     el('showOverview').onclick=()=>{overview=!overview;extra=false;el('showOverview').setAttribute('aria-pressed',String(overview));el('showExtra').setAttribute('aria-pressed','false');updateFrame(el('progress').value);};
     el('showExtra').onclick=()=>{extra=!extra;overview=false;el('showExtra').setAttribute('aria-pressed',String(extra));el('showOverview').setAttribute('aria-pressed','false');updateFrame(el('progress').value);};
     el('diagramIn').onclick=()=>zoomDiagram(1.35);el('diagramOut').onclick=()=>zoomDiagram(1/1.35);el('diagramFit').onclick=()=>{diagramScale=1;el('diagram').style.width='100%';};
-    el('expandDiagram').onclick=()=>{el('largeDiagram').src=diagramSource;el('dialogTitle').textContent=el('diagramCaption').textContent;el('diagramDialog').showModal();};el('closeDiagram').onclick=()=>el('diagramDialog').close();
+    el('expandDiagram').onclick=()=>{script('frame pause;');el('largeDiagram').src=diagramSource;el('dialogTitle').textContent=el('diagramCaption').textContent;el('diagramDialog').showModal();};el('closeDiagram').onclick=()=>el('diagramDialog').close();
     let drag;
     el('diagramViewport').onpointerdown=e=>{if(diagramScale<=1)return;drag={x:e.clientX,y:e.clientY,left:el('diagramViewport').scrollLeft,top:el('diagramViewport').scrollTop};el('diagramViewport').setPointerCapture(e.pointerId);el('diagramViewport').classList.add('dragging');};
     el('diagramViewport').onpointermove=e=>{if(!drag)return;el('diagramViewport').scrollLeft=drag.left+drag.x-e.clientX;el('diagramViewport').scrollTop=drag.top+drag.y-e.clientY;};
