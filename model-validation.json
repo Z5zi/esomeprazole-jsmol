@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "step": 1,
+      "frames": 61,
+      "atom_count": 29,
+      "start_and_end_graphs": "match verified source",
+      "net_charge": 0,
+      "sulfur_CIP": null
+    },
+    {
+      "step": 2,
+      "frames": 61,
+      "atom_count": 24,
+      "start_and_end_graphs": "match verified source",
+      "net_charge": 1,
+      "sulfur_CIP": null
+    },
+    {
+      "step": 3,
+      "frames": 61,
+      "atom_count": 28,
+      "start_and_end_graphs": "match verified source",
+      "net_charge": -1,
+      "sulfur_CIP": null
+    },
+    {
+      "step": 4,
+      "frames": 181,
+      "atom_count": 38,
+      "start_and_end_graphs": "match verified source",
+      "net_charge": 0,
+      "sulfur_CIP": null,
+      "intermediate_graphs": "All five states match native ChemDraw",
+      "oxygen_mapping": "Matches the formal [3,3] arrows"
+    },
+    {
+      "step": 5,
+      "frames": 61,
+      "atom_count": 32,
+      "start_and_end_graphs": "match verified source",
+      "net_charge": -1,
+      "sulfur_CIP": null
+    },
+    {
+      "step": 6,
+      "frames": 61,
+      "atom_count": 29,
+      "start_and_end_graphs": "match verified source",
+      "net_charge": 0,
+      "sulfur_CIP": null
+    },
+    {
+      "step": 7,
+      "frames": 226,
+      "atom_count": 23,
+      "start_and_end_graphs": "match verified source",
+      "net_charge": 0,
+      "sulfur_CIP": null,
+      "intermediate_graphs": "All six states match native ChemDraw",
+      "atom_mapping": "Retained/departing sulfurs and three proton transfers verified"
+    },
+    {
+      "step": 8,
+      "frames": 61,
+      "atom_count": 43,
+      "start_and_end_graphs": "match verified source",
+      "net_charge": -1,
+      "sulfur_CIP": null
+    },
+    {
+      "step": 9,
+      "frames": 61,
+      "atom_count": 65,
+      "start_and_end_graphs": "match verified source",
+      "net_charge": 0,
+      "sulfur_CIP": "S"
+    }
+  ],
+  "paired_revision": "2026-10-11",
+  "step7_revision": "2026-10-20"
+}

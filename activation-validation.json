@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "frames": 181,
+  "atoms_per_frame": 38,
+  "stages": [
+    {
+      "stage": 0,
+      "smiles": "CC(=O)OC(C)=O.COc1c(C)c[n+]([O-])c(C)c1C",
+      "formula": "C13H19NO5",
+      "net_charge": 0,
+      "native_graph_match": true
+    },
+    {
+      "stage": 1,
+      "smiles": "COc1c(C)c[n+](OC(C)([O-])OC(C)=O)c(C)c1C",
+      "formula": "C13H19NO5",
+      "net_charge": 0,
+      "native_graph_match": true
+    },
+    {
+      "stage": 2,
+      "smiles": "CC(=O)[O-].COc1c(C)c[n+](OC(C)=O)c(C)c1C",
+      "formula": "C13H19NO5",
+      "net_charge": 0,
+      "native_graph_match": true
+    },
+    {
+      "stage": 3,
+      "smiles": "C=C1C(C)=C(OC)C(C)=CN1OC(C)=O.CC(=O)O",
+      "formula": "C13H19NO5",
+      "net_charge": 0,
+      "native_graph_match": true
+    },
+    {
+      "stage": 4,
+      "smiles": "CC(=O)O.COc1c(C)cnc(COC(C)=O)c1C",
+      "formula": "C13H19NO5",
+      "net_charge": 0,
+      "native_graph_match": true
+    }
+  ],
+  "oxygen_mapping": {
+    "former_N_oxide_O": 1,
+    "former_acyl_carbonyl_O": 14,
+    "acyl_carbon": 13,
+    "product_alkoxy_bond": [
+      3,
+      14
+    ],
+    "product_carbonyl_bond": [
+      13,
+      1
+    ]
+  },
+  "scope": "The formal [3,3] teaching pathway drawn in the native document; not a uniquely established or computed path."
+}

@@ -1,0 +1,213 @@
+[
+  {
+    "num": 1,
+    "title": "Pyridine N-oxidation",
+    "conditions": "H₂O₂ / AcOH; peracetic acid formed in situ",
+    "description": "The terminal peroxide oxygen is transferred to pyridine nitrogen. O–O cleavage and proton transfer give the N-oxide and acetic acid.",
+    "phases": [
+      "Pyridine + peracetic acid",
+      "N–O forms; O–O breaks",
+      "N-oxide + acetic acid"
+    ],
+    "frames": 61,
+    "atoms": 29,
+    "script": "models/step-01.spt",
+    "diagram": "diagrams/step-01.png",
+    "diagramSvg": "diagrams/step-01.svg"
+  },
+  {
+    "num": 2,
+    "title": "Nitration at C4",
+    "conditions": "HNO₃ / H₂SO₄; electrophile represented as NO₂⁺",
+    "description": "Net C–N bond formation at C4, followed by loss of the ring proton. The 2D panel shows the sigma-complex stage; acid/base partners are condensed.",
+    "phases": [
+      "N-oxide + nitronium",
+      "C4–N bond formation",
+      "Nitro N-oxide; proton released"
+    ],
+    "frames": 61,
+    "atoms": 24,
+    "script": "models/step-02.spt",
+    "diagram": "diagrams/step-02.png",
+    "diagramSvg": "diagrams/step-02.svg"
+  },
+  {
+    "num": 3,
+    "title": "Methoxylation by substitution",
+    "conditions": "NaOMe / MeOH",
+    "description": "Methoxide replaces the C4 nitro group. This net bond-change animation condenses the addition–elimination sequence shown in the reference.",
+    "phases": [
+      "Nitro N-oxide + methoxide",
+      "C–O forms; C–N breaks",
+      "Methoxy N-oxide + nitrite"
+    ],
+    "frames": 61,
+    "atoms": 28,
+    "script": "models/step-03.spt",
+    "diagram": "diagrams/step-03.png",
+    "diagramSvg": "diagrams/step-03.svg"
+  },
+  {
+    "num": 4,
+    "title": "Boekelheide rearrangement",
+    "conditions": "Ac₂O / AcOH; heat",
+    "description": "N-oxide oxygen adds to acetic anhydride. Collapse releases acetate, which removes the C2-methyl proton. The final panel follows the formal [3,3] rearrangement drawn in ChemDraw.",
+    "phases": [
+      "N-oxide + acetic anhydride",
+      "Acylation / rearrangement (condensed)",
+      "Acetoxymethyl pyridine + AcOH"
+    ],
+    "frames": 181,
+    "atoms": 38,
+    "script": "models/step-04.spt",
+    "diagram": "diagrams/step-04.png",
+    "diagramSvg": "diagrams/step-04.svg",
+    "stages": [
+      {
+        "name": "O-acylation: addition",
+        "start": 1,
+        "end": 45,
+        "diagram": "diagrams/step-04-addition.png"
+      },
+      {
+        "name": "O-acylation: collapse",
+        "start": 46,
+        "end": 90,
+        "diagram": "diagrams/step-04-collapse.png"
+      },
+      {
+        "name": "Alpha deprotonation",
+        "start": 91,
+        "end": 135,
+        "diagram": "diagrams/step-04-deprotonation.png"
+      },
+      {
+        "name": "Formal [3,3] rearrangement",
+        "start": 136,
+        "end": 181,
+        "diagram": "diagrams/step-04-rearrangement.png"
+      }
+    ]
+  },
+  {
+    "num": 5,
+    "title": "Hydrolysis to the alcohol",
+    "conditions": "Aqueous NaOH; work-up",
+    "description": "Hydroxide replaces the pyridylmethoxy group at the acetyl carbonyl. Proton transfer gives the alcohol; acetate is the coproduct. The tetrahedral stage is in the reference.",
+    "phases": [
+      "Acetate ester + hydroxide",
+      "Acyl substitution / proton transfer",
+      "Pyridylmethanol + acetate"
+    ],
+    "frames": 61,
+    "atoms": 32,
+    "script": "models/step-05.spt",
+    "diagram": "diagrams/step-05.png",
+    "diagramSvg": "diagrams/step-05.svg"
+  },
+  {
+    "num": 6,
+    "title": "Alcohol to chloromethyl pyridine",
+    "conditions": "SOCl₂",
+    "description": "Net replacement of OH by chlorine; SO₂ and HCl are formed. Activation through the chlorosulfite is shown in the 2D panel. The reacting carbon is CH₂, not a stereocentre.",
+    "phases": [
+      "Alcohol + thionyl chloride",
+      "Activation and substitution (condensed)",
+      "Chloromethyl pyridine + SO₂ + HCl"
+    ],
+    "frames": 61,
+    "atoms": 29,
+    "script": "models/step-06.spt",
+    "diagram": "diagrams/step-06.png",
+    "diagramSvg": "diagrams/step-06.svg"
+  },
+  {
+    "num": 7,
+    "title": "Benzimidazole ring formation",
+    "conditions": "CS₂ / KOH in aqueous ethanol; work-up",
+    "description": "Neutral-form teaching sequence matching ChemDraw; protonation depends on the basic medium and work-up. Solvent and base are omitted from the proton relays. Motion is illustrative, not a calculated reaction pathway.",
+    "phases": [
+      "Diamine + CS₂",
+      "Addition, ring closure, proton relay and sulfur loss",
+      "Thiol I + H₂S"
+    ],
+    "frames": 226,
+    "atoms": 23,
+    "script": "models/step-07.spt",
+    "diagram": "diagrams/step-07.png",
+    "diagramSvg": "diagrams/step-07.svg",
+    "extraDiagram": {
+      "name": "Ring closure and proton transfers",
+      "src": "diagrams/step-07-ring-closure.png"
+    },
+    "stages": [
+      {
+        "name": "7 · CS₂ addition",
+        "start": 1,
+        "end": 45,
+        "diagram": "diagrams/step-07-addition.png",
+        "description": "The first amine adds to CS₂; a condensed proton transfer gives the neutral dithiocarbamic acid shown."
+      },
+      {
+        "name": "7a · Ring closure",
+        "start": 46,
+        "end": 90,
+        "diagram": "diagrams/step-07-cyclisation.png",
+        "description": "The neighbouring amine closes the five-membered ring, giving the cyclic tetrahedral N⁺/S⁻ intermediate."
+      },
+      {
+        "name": "7a · Proton relay",
+        "start": 91,
+        "end": 135,
+        "diagram": "diagrams/step-07-proton-relay.png",
+        "description": "A solvent-assisted proton relay transfers an N–H proton to the departing sulfur, giving S–H₂⁺."
+      },
+      {
+        "name": "7b · H₂S loss",
+        "start": 136,
+        "end": 180,
+        "diagram": "diagrams/step-07-sulfur-loss.png",
+        "description": "Collapse restores C=S and releases the second sulfur as H₂S, giving benzimidazole-2-thione."
+      },
+      {
+        "name": "7b · Thione ⇌ thiol",
+        "start": 181,
+        "end": 226,
+        "diagram": "diagrams/step-07-tautomerisation.png",
+        "description": "Proton transfer and bond rearrangement connect the thione with the thiol tautomer, intermediate I."
+      }
+    ]
+  },
+  {
+    "num": 8,
+    "title": "S-alkylation joins the branches",
+    "conditions": "NaOH; EtOAc / H₂O",
+    "description": "The S-nucleophile approaches the CH₂ carbon as chloride leaves. Benzimidazole tautomerisation gives the depicted J. NaOH generates the nucleophile and neutralises G·HCl; those preparatory proton transfers are omitted.",
+    "phases": [
+      "S-nucleophile + chloromethyl pyridine",
+      "C–S forms as C–Cl breaks",
+      "Sulfide J + chloride; tautomerisation"
+    ],
+    "frames": 61,
+    "atoms": 43,
+    "script": "models/step-08.spt",
+    "diagram": "diagrams/step-08.png",
+    "diagramSvg": "diagrams/step-08.svg"
+  },
+  {
+    "num": 9,
+    "title": "Asymmetric oxidation to esomeprazole",
+    "conditions": "Ti(OiPr)₄ / (S,S)-DET; controlled H₂O, toluene; then CHP / DIPEA",
+    "description": "Terminal peroxide oxygen is transferred to sulfur, giving the major S sulfoxide and cumyl alcohol. Catalyst preparation precedes oxidation. This schematic outcome does not depict an established titanium catalytic cycle.",
+    "phases": [
+      "Sulfide J + activated CHP",
+      "S–O formation / O–O cleavage",
+      "(S)-Esomeprazole + cumyl alcohol"
+    ],
+    "frames": 61,
+    "atoms": 65,
+    "script": "models/step-09.spt",
+    "diagram": "diagrams/step-09.png",
+    "diagramSvg": "diagrams/step-09.svg"
+  }
+]

@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "rdkit": "2026.03.6",
+  "source_cdxml_sha256": "026cec305c182be3916c26aa3f38232bfbe6b62548958a65e446fc8bd0efdfd5",
+  "frames": 226,
+  "atoms_per_frame": 23,
+  "states": [
+    {
+      "state": 0,
+      "frame": 1,
+      "smiles": "COc1ccc(N)c(N)c1.S=C=S",
+      "formula": "C8H10N2OS2",
+      "net_charge": 0,
+      "native_fragment_ids": [
+        1113,
+        1135
+      ],
+      "native_graph_match": true
+    },
+    {
+      "state": 1,
+      "frame": 46,
+      "smiles": "COc1ccc(NC(=S)S)c(N)c1",
+      "formula": "C8H10N2OS2",
+      "net_charge": 0,
+      "native_fragment_ids": [
+        10227
+      ],
+      "native_graph_match": true
+    },
+    {
+      "state": 2,
+      "frame": 91,
+      "smiles": "COc1ccc2c(c1)[NH2+]C([S-])(S)N2",
+      "formula": "C8H10N2OS2",
+      "net_charge": 0,
+      "native_fragment_ids": [
+        10261
+      ],
+      "native_graph_match": true
+    },
+    {
+      "state": 3,
+      "frame": 136,
+      "smiles": "COc1ccc2c(c1)NC([S-])([SH2+])N2",
+      "formula": "C8H10N2OS2",
+      "net_charge": 0,
+      "native_fragment_ids": [
+        10301
+      ],
+      "native_graph_match": true
+    },
+    {
+      "state": 4,
+      "frame": 181,
+      "smiles": "COc1ccc2[nH]c(=S)[nH]c2c1.S",
+      "formula": "C8H10N2OS2",
+      "net_charge": 0,
+      "native_fragment_ids": [
+        10375
+      ],
+      "native_graph_match": true
+    },
+    {
+      "state": 5,
+      "frame": 226,
+      "smiles": "COc1ccc2[nH]c(S)nc2c1.S",
+      "formula": "C8H10N2OS2",
+      "net_charge": 0,
+      "native_fragment_ids": [
+        10407
+      ],
+      "native_graph_match": true
+    }
+  ],
+  "atom_mapping": {
+    "CS2_carbon": 7,
+    "retained_sulfur": 8,
+    "departing_sulfur": 9,
+    "first_nitrogen": 6,
+    "ring_closing_nitrogen": 11
+  },
+  "scope": "Neutral-form teaching sequence matching ChemDraw; protonation depends on the basic medium and work-up. Solvent and base are omitted from the proton relays. Motion is illustrative, not a calculated reaction pathway.",
+  "labels": "Player 7a and 7b subdivide the upper and lower rows of native ChemDraw panel 07A."
+}

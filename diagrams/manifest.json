@@ -1,0 +1,281 @@
+{
+  "source": "Native ChemDraw SVG export from Esomeprazole_Sway_Mechanisms_2026-10-11.cdx",
+  "sourceSvgSha256": "cfe6d4ef0c092f71bf3edcf47d629ee1ff3aa2900796860c2131de1b2f54331c",
+  "pixelScale": 4,
+  "images": [
+    {
+      "name": "overview",
+      "viewBox": [
+        20,
+        120,
+        1455,
+        1070
+      ],
+      "width": 5820,
+      "height": 4280,
+      "bytes": 924883,
+      "sha256": "8ef5c671badae110ba5bf7fdab3a66bae0f57a2e3f0f04602d4b752663d4a21d"
+    },
+    {
+      "name": "step-01",
+      "viewBox": [
+        20,
+        1250,
+        1455,
+        360
+      ],
+      "width": 5820,
+      "height": 1440,
+      "bytes": 250539,
+      "sha256": "9d2ce245b56fa601c30e94a3eb4dd860ef67e9e2c3409b303a377930288b4c03"
+    },
+    {
+      "name": "step-02",
+      "viewBox": [
+        20,
+        1610,
+        1455,
+        360
+      ],
+      "width": 5820,
+      "height": 1440,
+      "bytes": 257836,
+      "sha256": "a82551d698179c48d3cfe1f9ab020fa41411e45da552ca95bafed02257726f57"
+    },
+    {
+      "name": "step-03",
+      "viewBox": [
+        20,
+        1970,
+        1455,
+        365
+      ],
+      "width": 5820,
+      "height": 1460,
+      "bytes": 241196,
+      "sha256": "97d7298be3f3560947233ef84e5db7bf3ac8badeac72e9c3b3149e643448172c"
+    },
+    {
+      "name": "step-04",
+      "viewBox": [
+        20,
+        2335,
+        1455,
+        375
+      ],
+      "width": 5820,
+      "height": 1500,
+      "bytes": 320857,
+      "sha256": "396e136b8bfd9353d4527b4a5b2f94a029293940a356105cad15dafc855a2e1d"
+    },
+    {
+      "name": "step-05",
+      "viewBox": [
+        20,
+        2710,
+        1455,
+        370
+      ],
+      "width": 5820,
+      "height": 1480,
+      "bytes": 241530,
+      "sha256": "6e406d0ff3116660fcc07bf63da0af478414967e15051fee3bad21e1ce578c7d"
+    },
+    {
+      "name": "step-06",
+      "viewBox": [
+        20,
+        3080,
+        1455,
+        375
+      ],
+      "width": 5820,
+      "height": 1500,
+      "bytes": 244744,
+      "sha256": "b26f890f1acfd8b3985f8f9e5047e31aeaed55a52cc8d0d36a6691341ae0b952"
+    },
+    {
+      "name": "step-07",
+      "viewBox": [
+        20,
+        3455,
+        1455,
+        370
+      ],
+      "width": 5820,
+      "height": 1480,
+      "bytes": 278919,
+      "sha256": "70c198c996c6a6e83d147c17208834c7a5500c84836471173b1fbc6d52d28400"
+    },
+    {
+      "name": "step-08",
+      "viewBox": [
+        20,
+        3825,
+        1455,
+        370
+      ],
+      "width": 5820,
+      "height": 1480,
+      "bytes": 246748,
+      "sha256": "3be73d3c88cd036087a280db773e3fcff75f47dbf524e035b33e132c0d6a8ebb"
+    },
+    {
+      "name": "step-09",
+      "viewBox": [
+        20,
+        4195,
+        1455,
+        375
+      ],
+      "width": 5820,
+      "height": 1500,
+      "bytes": 283148,
+      "sha256": "3ecd2058b683c155b1526b4deb501af6db3c9ce4c5d9428c626c247feb40b72f",
+      "postExportEdit": "2026-10-26: removed the explanatory subtitle, both lower explanatory lines, and the [3] citation after the reaction conditions; molecular drawing, arrows and reaction labels unchanged."
+    },
+    {
+      "name": "step-04-addition",
+      "viewBox": [
+        70,
+        4915,
+        830,
+        260
+      ],
+      "width": 3320,
+      "height": 1040,
+      "bytes": 109185,
+      "sha256": "69286e362d9a11729b9dfc3f15d9e464d7fbbe75be8dcf16014de8244709ca10"
+    },
+    {
+      "name": "step-04-collapse",
+      "viewBox": [
+        610,
+        4915,
+        810,
+        260
+      ],
+      "width": 3240,
+      "height": 1040,
+      "bytes": 108455,
+      "sha256": "ccf235991929a27f2c07fe5a7c1b3bfd93460a71f9480695d226c1f4f4434512"
+    },
+    {
+      "name": "step-04-deprotonation",
+      "viewBox": [
+        235,
+        5240,
+        1190,
+        340
+      ],
+      "width": 4760,
+      "height": 1360,
+      "bytes": 138694,
+      "sha256": "5d9a9812731706f17d5e83f0e8fe71967863b499c4367a4992ba5b171a134ad1"
+    },
+    {
+      "name": "step-04-rearrangement",
+      "viewBox": [
+        858,
+        2395,
+        585,
+        285
+      ],
+      "width": 2340,
+      "height": 1140,
+      "bytes": 82252,
+      "sha256": "68a08d0b4476f826717bb219b6a1c8d6e0e92a291c097a16e306b58d99c117ab"
+    },
+    {
+      "name": "step-04-activation-full",
+      "viewBox": [
+        60,
+        4805,
+        1380,
+        785
+      ],
+      "width": 5520,
+      "height": 3140,
+      "bytes": 394880,
+      "sha256": "d2ae934c16300cb15b0d47627f206b81e2c2fa2827d527bc6480e777a83b8425"
+    },
+    {
+      "name": "step-07-ring-closure",
+      "viewBox": [
+        60,
+        5740,
+        1380,
+        679
+      ],
+      "width": 5520,
+      "height": 2716,
+      "bytes": 436945,
+      "sha256": "a8207d4fb4ded0fa157f91f65b2272a3bb48ff821b18795851f3208239bc4f70"
+    },
+    {
+      "name": "step-07-addition",
+      "viewBox": [
+        75,
+        3525,
+        945,
+        220
+      ],
+      "width": 3780,
+      "height": 880,
+      "bytes": 104211,
+      "sha256": "668b05855d2c9250567337becd3b430db28469e8b7806d914909b9139e1c85ab"
+    },
+    {
+      "name": "step-07-cyclisation",
+      "viewBox": [
+        75,
+        5830,
+        835,
+        265
+      ],
+      "width": 3340,
+      "height": 1060,
+      "bytes": 116143,
+      "sha256": "908034e75473f34dc2b90024b261a0be8c99243ade99eb308e0719ab293cebec"
+    },
+    {
+      "name": "step-07-proton-relay",
+      "viewBox": [
+        560,
+        5830,
+        840,
+        265
+      ],
+      "width": 3360,
+      "height": 1060,
+      "bytes": 108686,
+      "sha256": "9a6fb9d438cc364aed746a7ea92e15845d454456f55e84ec5c7082ca2009cadc"
+    },
+    {
+      "name": "step-07-sulfur-loss",
+      "viewBox": [
+        75,
+        6185,
+        885,
+        255
+      ],
+      "width": 3540,
+      "height": 1020,
+      "bytes": 95022,
+      "sha256": "00573bbc42d99076600af18623df40726717c18f26eddfe7f7d8936ca07f2d26"
+    },
+    {
+      "name": "step-07-tautomerisation",
+      "viewBox": [
+        590,
+        6170,
+        810,
+        270
+      ],
+      "width": 3240,
+      "height": 1080,
+      "bytes": 97488,
+      "sha256": "06be31e4aae9167e4dfee942b08fc7a10d2fe0b522bdb21c877db80e1df334c9"
+    }
+  ]
+}
